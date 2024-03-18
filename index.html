@@ -8,6 +8,11 @@
 </head>
 <body>
     <div class="buttonMenu">
+        <select id="typeSelector" onchange="changeType()">
+            <option value="0">Characters</option>
+            <option value="1">Locations</option>
+            <option value="2">Episodes</option>
+        </select>
         <div>
             <button id="previousButton" onclick="previousPage()">Previous</button>
             <button id="nextButton" onclick="nextPage()">Next</button>
@@ -15,6 +20,8 @@
         <input type="text" id="searchField" placeholder="Search">
     </div>
     <div id="print">
+    </div>
+    <div id="printFicha">
     </div>
     <button id="backButton" onclick="goBack()">Back</button>
 </body>

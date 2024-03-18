@@ -5,16 +5,19 @@ body{
 }
 
 .ficha {
+    aspect-ratio: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: fit-content;
-    height: fit-content;
+    text-wrap: wrap;
+    justify-content: center;
     border-radius: 10px;
     border: 2px black solid;
     padding-top: 15px;
     margin: 2px;
     box-shadow: 0 10px 20px 0 grey;
+    animation:opac 0.3s}@keyframes opac{from{opacity:0} to{opacity:1};
 }
 
 .ficha:hover{
@@ -27,7 +30,17 @@ body{
     align-items: center;
     width: fit-content;
     height: fit-content;
-    border: 2px black solid;
+}
+
+.fichaLink{
+    background-color: grey;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.fichaLink:hover{
+    background-color: black;
+    color:white;
 }
 
 img{
@@ -37,9 +50,20 @@ img{
 
 
 #print {
-    display: flex;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,22%);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
     justify-content: center;
-    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#printFicha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
 }
 
@@ -58,4 +82,34 @@ img{
 
 #backButton {
     display: none;
+}
+
+.nodeGrid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(8,11%);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.nodeElement{
+    aspect-ratio: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px black solid;
+    padding-top: 5px;
+    margin: 2px;
+    animation:opac 0.3s}@keyframes opac{from{opacity:0} to{opacity:1};
+}
+
+.nodeElement:hover{
+    background-color: black;
+    color: white;
 }
